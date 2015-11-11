@@ -238,7 +238,7 @@ var BrowserStackBrowser = function (id, emitter, args, logger,
   this.forceKill = function () {
     var self = this
 
-    return new Promise(function (resolve) {
+    return q.promise(function (resolve) {
       self.kill(resolve)
     })
   }
